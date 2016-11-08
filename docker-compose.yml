@@ -1,0 +1,13 @@
+version: '2'
+services:
+  gitlab:
+    image: andrewglass3/gitlab
+    ports:
+    - "8080:8080"
+    - "80:80"
+    - "443:443"
+    restart: always
+    volumes:
+    - /opt/docker/srv/gitlab/data:/var/opt/gitlab:rw
+    - /opt/docker/srv/gitlab/logs:/var/log/gitlab:rw
+    - /opt/docker/srv/gitlab/config:/etc/gitlab:rw
