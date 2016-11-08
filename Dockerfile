@@ -4,9 +4,9 @@ MAINTAINER Andrew Glass <andrew.glass@outlook.com>
 VOLUME  ["/var/opt/gitlab", "/var/log/gitlab", "/etc/gitlab"]
 
 RUN    apt-get -qq update && \
-       apt-get install curl openssh-server ca-certificates && \
+       apt-get install -qy curl openssh-server ca-certificates && \
        curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash && \       
-       apt-get install gitlab-ce && \
+       apt-get install -qy gitlab-ce && \
        apt-get -f install && \
        gitlab-ctl reconfigure
 
