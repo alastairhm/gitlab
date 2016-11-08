@@ -10,7 +10,7 @@ RUN    apt-get -qq update && \
        apt-get -f install && \
        gitlab-ctl reconfigure
 
-EXPOSE 80/tcp 443/tcp 22/tcp 8080/TCP
+EXPOSE 80/tcp 443/tcp 22/tcp 8080/tcp
 
 
 
